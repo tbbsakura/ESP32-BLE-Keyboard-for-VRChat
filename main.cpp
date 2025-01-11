@@ -1,6 +1,3 @@
-// BleKeyboard.h, BleKeyboard.cpp を同じファイルに置いてビルドしてください
-//  https://github.com/T-vK/ESP32-BLE-Keyboard/blob/master/BleKeyboard.h
-//  https://github.com/T-vK/ESP32-BLE-Keyboard/blob/master/BleKeyboard.cpp
 
 const int pins[] = { 1,4,3 }; // 入力用pin 3つのGPUO
 // Questでいう ボタンセンサー（親指）、トリガー（人差し指）、グリップ（中指）の３ヶ所に対応
