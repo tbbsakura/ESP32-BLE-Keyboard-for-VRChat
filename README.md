@@ -12,7 +12,6 @@ GPIO 1,4,3 (digitalReadできるところなら他でも。その場合main.cpp�
  ![回路図](https://github.com/tbbsakura/ESP32-BLE-Keyboard-for-VRChat/blob/main/schematic.png)
 
 ## ビルド
-platformioで、lolin_c3_mini でプロジェクトを作り、
-main.cpp を  BleKeyboard.h, BleKeyboard.cpp を main.cpp と同じ場所(src)に置いてビルドしてください
-  - https://github.com/T-vK/ESP32-BLE-Keyboard/blob/master/BleKeyboard.h
-  - https://github.com/T-vK/ESP32-BLE-Keyboard/blob/master/BleKeyboard.cpp
+platformioで、lolin_c3_mini でプロジェクトを作り、ビルドしてください
+必要なライブラリは platformio.ini に記述してあるので自動的にダウンロードされるはずです。
+
