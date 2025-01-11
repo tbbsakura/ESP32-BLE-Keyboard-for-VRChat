@@ -17,10 +17,10 @@ git clone --recursive https://github.com/tbbsakura/ESP32-BLE-Keyboard-for-VRChat
 必要なライブラリは platformio.ini にも記述してあるので自動的にダウンロードされるはずです。
 
 ## NimBLEライブラリについて
-NimBLE(ESP32C3やS3で使われているBLEライブラリ)の Arduino Coreライブラリは 1.4.x と 2.x.x で大きく内容が変わっており、過去に作ったコードが2.x.xで動かないというのが頻発しています。
+NimBLE(ESP32C3やS3で使われているBluetoothスタック)の Arduino Coreライブラリは 1.4.x と 2.x.x で大きく内容が変わっており、過去に作ったコードが2.x.xで動かないというのが頻発しています。
 こちらはplatformio.ini内で1.4.3固定で指定しています。
 
-(蛇足ですが、初代ESP32で使えていた bluedroid は最近のESP32*では使えなくなっています)
+(蛇足ですが、初代ESP32で使えていた Bluedroid というBluetoothスタックは最近のESP32*では使えなくなっています)
 
 ## ESP32-BLE-* ライブラリについて
 t-vk/ESP32 BLE Keyboard はPlatformIOにも登録されているライブラリですが、同じところで公開されているマウスのほうはNimBLEが必要なS3,C3だとうまく動きませんでした。また、キーボードとマウスは別々になっています。
