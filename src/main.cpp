@@ -41,7 +41,7 @@ void SendFn(int n, bool left = false, uint8_t dsec = 3) // n=1 ならFN1を,  ds
   bleKeyboard.releaseAll();
 }
 
-// たとえば、Serial で FL1 と送れば、LEFT SHIFT+ F1 を3秒後に送出する(その3秒の間に、キー入力したいアプリをactiveにする)
+// たとえば、Serial で LF1 と送れば、LEFT SHIFT+ F1 を3秒後に送出する(その3秒の間に、キー入力したいアプリをactiveにする)
 void loopSerialCommand() 
 {
   if ( Serial.available()>0 ) {
@@ -50,11 +50,14 @@ void loopSerialCommand()
       Serial.printf("Not connected\n");
       return;
     }
+    if (cmd.length() < 3 ){
+      Serial.printf("command not recognized: '%s' \n", cmd.c_str());
+    }
 
     char lr = cmd.charAt(0);
     char f  = cmd.charAt(1);
     char n  = cmd.charAt(2);
-    if ( f == 'F' && (lr =='L' || lr =='R') ) { // FL/FR両方大文字のとき
+    if ( f == 'F' && (lr =='L' || lr =='R') ) { // LF/RF両方大文字のとき
       f += 0x20; // 小文字(ASCIIコード 大文字+0x20)にする
       lr += 0x20;
     }
@@ -63,7 +66,7 @@ void loopSerialCommand()
        SendFn( (int)n, lr == 'l', 3);
     }
     else {
-      Serial.println("command not recognized");
+      Serial.printf("command not recognized: '%s' \n", cmd.c_str());
     }
   }
 }
