@@ -12,8 +12,9 @@ GPIO 1,4,3 (digitalReadできるところなら他でも。その場合main.cpp�
  ![回路図](https://github.com/tbbsakura/ESP32-BLE-Keyboard-for-VRChat/blob/main/schematic.png)
 
 ## ビルド
-platformioで、lolin_c3_mini でプロジェクトを作り、ビルドしてください
-必要なライブラリは platformio.ini に記述してあるので自動的にダウンロードされるはずです。
+git clone --recursive https://github.com/tbbsakura/ESP32-BLE-Keyboard-for-VRChat 
+して、VSCodeでフォルダを開くとPlatformIOのプロジェクトが開きますので、ビルドしてください。
+必要なライブラリは platformio.ini にも記述してあるので自動的にダウンロードされるはずです。
 
 ## NimBLEライブラリについて
 NimBLE(ESP32C3やS3で使われているBLEライブラリ)の Arduino Coreライブラリは 1.4.x と 2.x.x で大きく内容が変わっており、過去に作ったコードが2.x.xで動かないというのが頻発しています。
